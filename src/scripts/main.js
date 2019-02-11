@@ -19,14 +19,14 @@ postAllEmployees()
 })
 
 document.querySelector("#search-name-btn").addEventListener("click",()=>{
-
-
+    const searchTerm = document.querySelector("#search-name").value
+queryAllEmployees(searchTerm)
 
 })
 
 document.querySelector("#search-dept-btn").addEventListener("click",()=>{
-    const dept = document.querySelector("#search-department").value
-    searchAllEmployees(dept)
+    const searchTerm = document.querySelector("#search-department").value
+    searchAllEmployees(searchTerm, "department")
 
 
 

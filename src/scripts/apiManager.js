@@ -29,16 +29,28 @@ const getAllEmployees = () => {
 
 }
 
-
-
-const searchAllEmployees = (dept) => {
+const searchAllEmployees = (searchTerm, category) => {
     document.querySelector("#employee-cards").innerHTML = ""
-    getAllEmployees().then((allEmployees)=>{
+    getAllEmployees().then((allEmployees) => {
         allEmployees.forEach(employee => {
-            if (employee.department === dept) {
+            console.log(category)
+            if (employee[category] === searchTerm) {
                 buildEmployeeString("employee-cards", employee)
             }
+        })
+    })
+}
+
+const queryAllEmployees = (searchTerm) => {
+    document.querySelector("#employee-cards").innerHTML = ""
+    return fetch(`http://localhost:8088/employees?q=${searchTerm}`)
+        .then(employees => employees.json())
+        .then(allEmployees => {
+            allEmployees.forEach(employee => {
+                buildEmployeeString("employee-cards", employee)
+
+            })
 
         })
-    }
-    )}
+}
+

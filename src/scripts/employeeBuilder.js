@@ -24,6 +24,8 @@ const buildEmployeeString =(id,object)=>{
     else if(object.gender==="female"){
         image ="https://medmc.ca/wp-content/uploads/2018/08/person-placeholder-female.jpg"
     }
+
+    if(object.supervisor==="")
 return document.querySelector(`#${id}`).innerHTML+=`<div class="card" style="width: 200px;">
   <img src="${image}" width = "200px" class="card-img-top" alt="...">
   <div class="card-body">
