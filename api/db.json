@@ -8,6 +8,24 @@
       "birthday": "1965-02-05",
       "department": "accounting",
       "id": 1
+    },
+    {
+      "firstName": "john",
+      "lastName": "smoth",
+      "email": "freotjo@igjogjri",
+      "phone": "123456789",
+      "birthday": "1598-02-03",
+      "department": "horses",
+      "id": 2
+    },
+    {
+      "firstName": "Sydney",
+      "lastName": "Bidney",
+      "email": "jgirjgreijoi@grignreoijio",
+      "phone": "12345678798",
+      "birthday": "1214-02-02",
+      "department": "jump",
+      "id": 3
     }
   ]
 }

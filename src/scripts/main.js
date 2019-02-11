@@ -1,3 +1,4 @@
+getAllEmployees()
 document.querySelector("#submit-btn").addEventListener("click", ()=>{
 console.log("you clicked the button!")
 //collect the date from the form fields//
@@ -21,5 +22,7 @@ console.log(employeeObject)
 
 
 
-createEmployee(employeeObject)
+const employee = createEmployee(employeeObject)
+getAllEmployees()
+console.log(employee)
 })
