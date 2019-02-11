@@ -1,0 +1,43 @@
+#employee-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card{
+
+    border: 2px black solid;
+    margin: 1em 1em 1em 1em;
+    /* justify-content: center; */
+    /* margin: 0 auto; */
+
+
+}
+img{
+    display: inline-block;
+    border: 1px red solid;
+    border-radius: 20px;
+    justify-content: center;
+    margin: auto;
+}
+
+button{
+
+
+}
+#form-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    border: 1px black solid;
+}
+.dept-title{
+text-align: center;
+
+    color: navy;
+
+}
+
+.card-title{
+    text-align: center;
+}

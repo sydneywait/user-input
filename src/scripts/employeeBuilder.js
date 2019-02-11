@@ -1,13 +1,39 @@
-const buildEmployee =(id,object)=>{
-return document.querySelector(`#${id}`).innerHTML+=`<div class="card" style="width: 18rem;">
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLDHGbmeO_n4BngHukOBOaSZ-ojh1V6iVq1WsUCUuDZKCHs3iZ" class="card-img-top" alt="...">
+const buildEmployeeObject = (firstName, lastName, email, phone, birthday, department, supervisor, gender)=>{
+    const employeeObject = {
+
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        birthday: birthday,
+        department: department,
+        supervisor: supervisor,
+        gender: gender,
+
+    }
+
+    return employeeObject;
+}
+
+const buildEmployeeString =(id,object)=>{
+    let image ="";
+
+    if(object.gender ==="male"){
+        image = "https://tricityescaperooms.com/wp-content/uploads/2018/01/person-placeholder-male-5-300x300.jpg"
+    }
+    else if(object.gender==="female"){
+        image ="https://medmc.ca/wp-content/uploads/2018/08/person-placeholder-female.jpg"
+    }
+return document.querySelector(`#${id}`).innerHTML+=`<div class="card" style="width: 200px;">
+  <img src="${image}" width = "200px" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">${object.firstName} ${object.lastName}</h5>
-    <p class="card-text">Department: ${object.department}</p>
-    <p class="card-text">Email: ${object.email}</p>
-    <p class="card-text">Phone: ${object.phone}</p>
-    <p class="card-text">Birthday: ${object.birthday}</p>
-    <a href="#" class="btn delete-btn">delete</a>
+    <h4 class="card-title">${object.firstName} ${object.lastName}</h4>
+    <p class="dept-title">${object.department}</p>
+    <p class="card-email">Email: ${object.email}</p>
+    <p class="card-phone">Phone: ${object.phone}</p>
+    <p class="card-bday">Birthday: ${object.birthday}</p>
+    <button class="btn edit-btn">edit</button>
+    <button class="btn delete-btn">delete</button>
   </div>
 </div>`
 

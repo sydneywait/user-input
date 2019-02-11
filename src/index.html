@@ -10,16 +10,52 @@
 </head>
 
 <body>
-  <section id="form-input">
-    <input type="text" id="first-name" placeholder="Enter First Name"><br>
-    <input type="text" id="last-name" placeholder="Enter Last Name"><br>
-    <input type="text" id="email-address" placeholder="Enter Email Address"><br>
-    <input type="text" id="phone-number" placeholder="Enter Phone Number"><br>
-    <input type="date" id="birthday" placeholder="Enter Birthday"><br>
-    <input type="text" id="department" placeholder="Enter Department"><br>
+  <div id="form-header">
+    <section id="form-input">
+      <fieldset>
+        <input type="text" id="first-name" placeholder="Enter First Name"><br>
+        <input type="text" id="last-name" placeholder="Enter Last Name"><br>
+        <input type="text" id="email-address" placeholder="Enter Email Address"><br>
+        <input type="text" id="phone-number" placeholder="Enter Phone Number"><br>
+        <input type="date" id="birthday" placeholder="Enter Birthday"><br>
+        <select id="department">
+          <option value="Finance">Finance</option>
+          <option value="Sales">Sales</option>
+          <option value="Human Resources">Human Resources</option>
+          <option value="Marketing">Marketing</option>
+        </select><br>
+        <input type="checkbox" id="supervisor" value="Yes">Supervisor?<br>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">female</label><br>
+        <button id="submit-btn">Submit</button>
+      </fieldset>
 
-    <button id="submit-btn">Submit</button>
-  </section>
+
+    </section>
+    <section id="search-queries">
+      <fieldset>
+        <input type="text" id="search-employees" placeholder="Search by First or Last Name"><br>
+        <button id="search-name-btn">Search</button>
+      </fieldset>
+        <fieldset>
+        <input type="text" id="search-department" placeholder="Search by Department"><br>
+        <button id="search-dept-btn">Search</button>
+      </fieldset>
+    </fieldset>
+    <fieldset>
+        <label for="show-super-btn" class="btn-labels">Show All Supervisors</label> <br>
+        <button id="show-super-btn">Show</button>
+  </fieldset>
+  <fieldset>
+      <label for="show-all-btn" class="btn-labels">Show All Employees</label> <br>
+      <button id="show-all-btn">Show</button>
+</fieldset>
+
+
+    </section>
+  </div>
 
   <section id="employee-cards"></section>
 
