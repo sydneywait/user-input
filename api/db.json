@@ -95,7 +95,7 @@
       "phone": "3043569874",
       "birthday": "1956-02-05",
       "department": "Sales",
-      "supervisor": "Yes",
+      "supervisor": "No",
       "gender": "female",
       "id": 9
     },
@@ -106,7 +106,7 @@
       "phone": "3043569874",
       "birthday": "1956-02-05",
       "department": "Sales",
-      "supervisor": "Yes",
+      "supervisor": "No",
       "gender": "female",
       "id": 10
     },
@@ -128,7 +128,7 @@
       "phone": "bhj",
       "birthday": "",
       "department": "Finance",
-      "supervisor": "false",
+      "supervisor": "No",
       "gender": "female",
       "id": 12
     },
@@ -139,7 +139,7 @@
       "phone": "bhj",
       "birthday": "",
       "department": "Finance",
-      "supervisor": "false",
+      "supervisor": "No",
       "gender": "male",
       "id": 13
     },
@@ -150,7 +150,7 @@
       "phone": "",
       "birthday": "",
       "department": "Finance",
-      "supervisor": "false",
+      "supervisor": "No",
       "gender": "female",
       "id": 14
     },
@@ -161,7 +161,7 @@
       "phone": "",
       "birthday": "",
       "department": "Finance",
-      "supervisor": "false",
+      "supervisor": "No",
       "gender": "male",
       "id": 15
     },
@@ -172,7 +172,7 @@
       "phone": "",
       "birthday": "",
       "department": "Finance",
-      "supervisor": "true",
+      "supervisor": "No",
       "gender": "male",
       "id": 16
     },
@@ -183,9 +183,42 @@
       "phone": "",
       "birthday": "",
       "department": "Finance",
-      "supervisor": "true",
+      "supervisor": "Yes",
       "gender": "female",
       "id": 17
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "birthday": "",
+      "department": "Finance",
+      "supervisor": "No",
+      "gender": "male",
+      "id": 18
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "birthday": "",
+      "department": "Finance",
+      "supervisor": "No",
+      "gender": "male",
+      "id": 19
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "birthday": "",
+      "department": "Finance",
+      "supervisor": "Yes",
+      "gender": "male",
+      "id": 20
     }
   ]
 }

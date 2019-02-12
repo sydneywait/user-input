@@ -15,7 +15,6 @@ const postAllEmployees = () => {
         .then(allEmployees => {
             allEmployees.forEach(employee => {
                 buildEmployeeString("employee-cards", employee)
-
             })
         })
 }
@@ -24,19 +23,6 @@ const postAllEmployees = () => {
 const getAllEmployees = () => {
     return fetch("http://localhost:8088/employees")
         .then(employees => employees.json())
-
-}
-
-const searchAllEmployees = (searchTerm, category) => {
-    document.querySelector("#employee-cards").innerHTML = ""
-    getAllEmployees().then((allEmployees) => {
-        allEmployees.forEach(employee => {
-            console.log(category)
-            if (employee[category] === searchTerm) {
-                buildEmployeeString("employee-cards", employee)
-            }
-        })
-    })
 }
 
 const queryAllEmployees = (searchTerm) => {
@@ -46,9 +32,7 @@ const queryAllEmployees = (searchTerm) => {
         .then(allEmployees => {
             allEmployees.forEach(employee => {
                 buildEmployeeString("employee-cards", employee)
-
             })
-
         })
 }
 
@@ -58,8 +42,14 @@ return fetch(`http://localhost:8088/employees/${employeeId}`,{
 method: "DELETE"
 
 })
-
-
 }
+
+// const putEmployee = (employeeId) =>{
+//     return fetch(`http://localhost:8088/employees/${employeeId}`,{
+
+//     method: "PUT"
+
+//     })
+//     }
 
 

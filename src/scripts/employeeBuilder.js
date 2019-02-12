@@ -24,9 +24,16 @@ const buildEmployeeString =(id,object)=>{
     else if(object.gender==="female"){
         image ="https://medmc.ca/wp-content/uploads/2018/08/person-placeholder-female.jpg"
     }
+let superClass=""
+    if(object.supervisor==="Yes"){
+        superClass = "supervisor"
 
-    // if(object.supervisor==="")
-return document.querySelector(`#${id}`).innerHTML+=`<div class="card" style="width: 200px;">
+    }
+    else if (object.supervisor==="No"){
+        superClass="employee"
+    }
+
+return document.querySelector(`#${id}`).innerHTML+=`<div class="card ${superClass}" style="width: 200px;">
   <img src="${image}" width = "200px" class="card-img-top" alt="...">
   <div class="card-body">
     <h4 class="card-title">${object.firstName} ${object.lastName}</h4>
