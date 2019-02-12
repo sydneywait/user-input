@@ -1,17 +1,6 @@
 {
   "employees": [
     {
-      "firstName": "Sydney",
-      "lastName": "Wait",
-      "email": "wait@gmail.com",
-      "phone": "3043614579",
-      "birthday": "1989-03-02",
-      "department": "Human Resources",
-      "supervisor": "No",
-      "gender": "female",
-      "id": 1
-    },
-    {
       "firstName": "Thomas ",
       "lastName": "Wait",
       "email": "Thomas@gmail.com",
@@ -34,17 +23,6 @@
       "id": 3
     },
     {
-      "firstName": "George",
-      "lastName": "Wait",
-      "email": "george@gmail.com",
-      "phone": "3045698745",
-      "birthday": "",
-      "department": "Sales",
-      "supervisor": "Yes",
-      "gender": "male",
-      "id": 4
-    },
-    {
       "firstName": "Connie",
       "lastName": "Wait",
       "email": "connie@gmail.com",
@@ -54,17 +32,6 @@
       "supervisor": "Yes",
       "gender": "female",
       "id": 5
-    },
-    {
-      "firstName": "Steve",
-      "lastName": "Wait",
-      "email": "steve@gmail.com",
-      "phone": "3045984579",
-      "birthday": "1982-03-23",
-      "department": "Finance",
-      "supervisor": "Yes",
-      "gender": "female",
-      "id": 6
     },
     {
       "firstName": "Steve",
@@ -109,116 +76,6 @@
       "supervisor": "No",
       "gender": "female",
       "id": 10
-    },
-    {
-      "firstName": "Kelly",
-      "lastName": "Stanton",
-      "email": "kelly@gmail.com",
-      "phone": "3043569874",
-      "birthday": "1956-02-05",
-      "department": "Sales",
-      "supervisor": "Yes",
-      "gender": "female",
-      "id": 11
-    },
-    {
-      "firstName": "fdafeafsdfds",
-      "lastName": "bjkhjk",
-      "email": "44",
-      "phone": "bhj",
-      "birthday": "",
-      "department": "Finance",
-      "supervisor": "No",
-      "gender": "female",
-      "id": 12
-    },
-    {
-      "firstName": "fdafeafsdfds",
-      "lastName": "bjkhjk",
-      "email": "44",
-      "phone": "bhj",
-      "birthday": "",
-      "department": "Finance",
-      "supervisor": "No",
-      "gender": "male",
-      "id": 13
-    },
-    {
-      "firstName": "fdsfds",
-      "lastName": "",
-      "email": "",
-      "phone": "",
-      "birthday": "",
-      "department": "Finance",
-      "supervisor": "No",
-      "gender": "female",
-      "id": 14
-    },
-    {
-      "firstName": "fdsfds",
-      "lastName": "",
-      "email": "",
-      "phone": "",
-      "birthday": "",
-      "department": "Finance",
-      "supervisor": "No",
-      "gender": "male",
-      "id": 15
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "phone": "",
-      "birthday": "",
-      "department": "Finance",
-      "supervisor": "No",
-      "gender": "male",
-      "id": 16
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "phone": "",
-      "birthday": "",
-      "department": "Finance",
-      "supervisor": "Yes",
-      "gender": "female",
-      "id": 17
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "phone": "",
-      "birthday": "",
-      "department": "Finance",
-      "supervisor": "No",
-      "gender": "male",
-      "id": 18
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "phone": "",
-      "birthday": "",
-      "department": "Finance",
-      "supervisor": "No",
-      "gender": "male",
-      "id": 19
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "phone": "",
-      "birthday": "",
-      "department": "Finance",
-      "supervisor": "Yes",
-      "gender": "male",
-      "id": 20
     }
   ]
 }

@@ -32,11 +32,24 @@
         <button id="submit-btn">Submit</button>
       </fieldset>
 
+      <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Are you sure you want to delete?</p>
+    <button id ="yes-modal">yes</button>
+    <button id = "no-modal">no</button>
+  </div>
+
+</div>
+
 
     </section>
     <section id="search-queries">
       <fieldset>
-        <input type="text" id="search-name" placeholder="Search by First or Last Name"><br>
+        <input type="text" id="search-name" placeholder="Search by Name or Department"><br>
         <button id="search-name-btn">Search</button>
       </fieldset>
         <fieldset>
@@ -59,9 +72,11 @@
 
   <section id="employee-cards"></section>
 
-
+<script src ="scripts/collectData.js"></script>
   <script src="scripts/employeeBuilder.js"></script>
+  <script src = "scripts/delAlert.js"></script>
   <script src="scripts/apiManager.js"></script>
+  <script src="scripts/editForm.js"></script>
   <script src="scripts/main.js"></script>
 
 </body>

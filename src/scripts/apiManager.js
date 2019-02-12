@@ -7,22 +7,31 @@ const createEmployee = (employeeObject) => {
         body: JSON.stringify(employeeObject)
     })
 }
-
-const postAllEmployees = () => {
+const getAllEmployees = () => {
     document.querySelector("#employee-cards").innerHTML = ""
     return fetch("http://localhost:8088/employees")
         .then(employees => employees.json())
-        .then(allEmployees => {
+}
+
+const printAllEmployees = () => {
+    getAllEmployees()
+        .then((allEmployees => {
             allEmployees.forEach(employee => {
                 buildEmployeeString("employee-cards", employee)
             })
         })
+        )
 }
 
-
-const getAllEmployees = () => {
-    return fetch("http://localhost:8088/employees")
-        .then(employees => employees.json())
+const printAllSupervisors = () => {
+    getAllEmployees()
+        .then((allEmployees => {
+            allEmployees.forEach(employee => {
+                if (employee.supervisor === "Yes")
+                    buildEmployeeString("employee-cards", employee)
+            })
+        })
+        )
 }
 
 const queryAllEmployees = (searchTerm) => {
@@ -36,20 +45,30 @@ const queryAllEmployees = (searchTerm) => {
         })
 }
 
-const delEmployee = (employeeId) =>{
-return fetch(`http://localhost:8088/employees/${employeeId}`,{
+const delEmployee = (employeeId) => {
+    return fetch(`http://localhost:8088/employees/${employeeId}`, {
 
-method: "DELETE"
+        method: "DELETE"
 
-})
+    })
 }
 
-// const putEmployee = (employeeId) =>{
-//     return fetch(`http://localhost:8088/employees/${employeeId}`,{
+const getOneEmployee =(employeeId) => {
+    document.querySelector(`#employee-${employeeId}`).innerHTML = ""
+    return fetch(`http://localhost:8088/employees/${employeeId}`)
+    .then(employee=>employee.json())
+}
 
-//     method: "PUT"
 
-//     })
-//     }
+
+// const putEmployee = (employeeId) => {
+//     return fetch(`http://localhost:8088/employees/${employeeId}`, {
+//     method: "PATCH"
+//     headers: {
+//             "Content-Type": "application/json"
+//         },
+//         body: JSON.stringify(supervisor:"Yes")
+    //     })
+    // }
 
 

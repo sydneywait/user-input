@@ -1,6 +1,5 @@
 
 document.querySelector("#submit-btn").addEventListener("click", () => {
-    console.log("you clicked the button!")
     //collect the data from the form fields//
     const firstName = document.querySelector("#first-name").value
     const lastName = document.querySelector("#last-name").value
@@ -19,11 +18,9 @@ document.querySelector("#submit-btn").addEventListener("click", () => {
     }
     //Check which gender is specified
     const gender = document.querySelector("input[name = \"gender\"]:checked").value
-    console.log("this is the gender", gender)
-
     const employeeObject = buildEmployeeObject(firstName, lastName, email, phone, birthday, department, superValue, gender)
     createEmployee(employeeObject).then(() => {
-        postAllEmployees()
+        printAllEmployees()
     })
 })
 
@@ -38,24 +35,31 @@ document.querySelector("#search-dept-btn").addEventListener("click", () => {
 })
 
 document.querySelector("#show-super-btn").addEventListener("click", () => {
-postAllSupervisors()
+    printAllSupervisors()
 })
 
 document.querySelector("#show-all-btn").addEventListener("click", () => {
-    postAllEmployees()
+    printAllEmployees()
 })
 
 document.querySelector("#employee-cards").addEventListener("click", () => {
-    const employeeId = event.target.id.split("-")[2]
-    delEmployee(employeeId).then(() => {
-        postAllEmployees()
-    })
+    // check to see if the delete or edit button was clicked
+    const targeted = event.target.id.split("-")[0]
+    if (targeted === "delete") {
+        const employeeId = event.target.id.split("-")[2]
+        delAlert(employeeId)
+    }
+    else if (targeted === "edit") {
+        const employeeId = event.target.id.split("-")[2]
+        getOneEmployee(employeeId)
+        .then((singleEmployeeInfo)=> {
+            console.log(singleEmployeeInfo)
+
+            document.querySelector(`#employee-${employeeId}`).innerHTML = buildEditForm(singleEmployeeInfo)
+
+        })
+    }
 })
 
 
-// document.querySelector("#employee-cards").addEventListener("click", () => {
-//     const employeeId = event.target.id.split("-")[2]
-//     editEmployee(employeeId).then(() => {
-//         postAllEmployees()
-//     })
-// })
+

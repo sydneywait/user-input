@@ -33,9 +33,9 @@ let superClass=""
         superClass="employee"
     }
 
-return document.querySelector(`#${id}`).innerHTML+=`<div class="card ${superClass}" style="width: 200px;">
+return document.querySelector(`#${id}`).innerHTML+=`<div class="card ${superClass}" id = "employee-${object.id}" style="width: 200px;">
   <img src="${image}" width = "200px" class="card-img-top" alt="...">
-  <div class="card-body">
+  <div class="card-body" id="card-${object.id}">
     <h4 class="card-title">${object.firstName} ${object.lastName}</h4>
     <p class="dept-title">${object.department}</p>
     <p class="card-email">Email: ${object.email}</p>
