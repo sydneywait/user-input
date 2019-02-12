@@ -25,7 +25,7 @@ const buildEmployeeString =(id,object)=>{
         image ="https://medmc.ca/wp-content/uploads/2018/08/person-placeholder-female.jpg"
     }
 
-    if(object.supervisor==="")
+    // if(object.supervisor==="")
 return document.querySelector(`#${id}`).innerHTML+=`<div class="card" style="width: 200px;">
   <img src="${image}" width = "200px" class="card-img-top" alt="...">
   <div class="card-body">
@@ -34,8 +34,8 @@ return document.querySelector(`#${id}`).innerHTML+=`<div class="card" style="wid
     <p class="card-email">Email: ${object.email}</p>
     <p class="card-phone">Phone: ${object.phone}</p>
     <p class="card-bday">Birthday: ${object.birthday}</p>
-    <button class="btn edit-btn">edit</button>
-    <button class="btn delete-btn">delete</button>
+    <button class="btn edit-btn" id = "edit-btn-${object.id}">edit</button>
+    <button class="btn delete-btn" id = "delete-btn-${object.id}">delete</button>
   </div>
 </div>`
 

@@ -76,6 +76,116 @@
       "supervisor": "Yes",
       "gender": "male",
       "id": 7
+    },
+    {
+      "firstName": "Logan",
+      "lastName": "Stanton",
+      "email": "logan@gmail.com",
+      "phone": "3043000869",
+      "birthday": "1976-12-04",
+      "department": "Human Resources",
+      "supervisor": "Yes",
+      "gender": "male",
+      "id": 8
+    },
+    {
+      "firstName": "Kelly",
+      "lastName": "Stanton",
+      "email": "kelly@gmail.com",
+      "phone": "3043569874",
+      "birthday": "1956-02-05",
+      "department": "Sales",
+      "supervisor": "Yes",
+      "gender": "female",
+      "id": 9
+    },
+    {
+      "firstName": "Kelly",
+      "lastName": "Stanton",
+      "email": "kelly@gmail.com",
+      "phone": "3043569874",
+      "birthday": "1956-02-05",
+      "department": "Sales",
+      "supervisor": "Yes",
+      "gender": "female",
+      "id": 10
+    },
+    {
+      "firstName": "Kelly",
+      "lastName": "Stanton",
+      "email": "kelly@gmail.com",
+      "phone": "3043569874",
+      "birthday": "1956-02-05",
+      "department": "Sales",
+      "supervisor": "Yes",
+      "gender": "female",
+      "id": 11
+    },
+    {
+      "firstName": "fdafeafsdfds",
+      "lastName": "bjkhjk",
+      "email": "44",
+      "phone": "bhj",
+      "birthday": "",
+      "department": "Finance",
+      "supervisor": "false",
+      "gender": "female",
+      "id": 12
+    },
+    {
+      "firstName": "fdafeafsdfds",
+      "lastName": "bjkhjk",
+      "email": "44",
+      "phone": "bhj",
+      "birthday": "",
+      "department": "Finance",
+      "supervisor": "false",
+      "gender": "male",
+      "id": 13
+    },
+    {
+      "firstName": "fdsfds",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "birthday": "",
+      "department": "Finance",
+      "supervisor": "false",
+      "gender": "female",
+      "id": 14
+    },
+    {
+      "firstName": "fdsfds",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "birthday": "",
+      "department": "Finance",
+      "supervisor": "false",
+      "gender": "male",
+      "id": 15
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "birthday": "",
+      "department": "Finance",
+      "supervisor": "true",
+      "gender": "male",
+      "id": 16
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "phone": "",
+      "birthday": "",
+      "department": "Finance",
+      "supervisor": "true",
+      "gender": "female",
+      "id": 17
     }
   ]
 }

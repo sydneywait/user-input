@@ -18,8 +18,6 @@ const postAllEmployees = () => {
 
             })
         })
-
-
 }
 
 
@@ -53,4 +51,15 @@ const queryAllEmployees = (searchTerm) => {
 
         })
 }
+
+const delEmployee = (employeeId) =>{
+return fetch(`http://localhost:8088/employees/${employeeId}`,{
+
+method: "DELETE"
+
+})
+
+
+}
+
 
