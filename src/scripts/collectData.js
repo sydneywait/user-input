@@ -18,9 +18,7 @@ const collectData = (firstNameId, lastNameId, emailId, phoneId, birthdayId, depa
     //Check which gender is specified
     const gender = document.querySelector("input[name = \"gender\"]:checked").value
     const employeeObject = buildEmployeeObject(firstName, lastName, email, phone, birthday, department, superValue, gender)
-    createEmployee(employeeObject).then(() => {
-        printAllEmployees()
-    })
+    return employeeObject;
 
 }
 

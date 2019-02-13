@@ -62,14 +62,16 @@ const getOneEmployee =(employeeId) => {
 
 
 
-// const putEmployee = (employeeId) => {
-//     return fetch(`http://localhost:8088/employees/${employeeId}`, {
-//     method: "PATCH"
-//     headers: {
-//             "Content-Type": "application/json"
-//         },
-//         body: JSON.stringify(supervisor:"Yes")
-    //     })
-    // }
+const putEmployee = (employeeObject, employeeId) => {
+    return fetch(`http://localhost:8088/employees/${employeeId}`, {
+    method: "PUT",
+    headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(employeeObject)
+        })
+    }
+
+
 
 

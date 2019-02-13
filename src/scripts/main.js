@@ -1,6 +1,9 @@
 // event listener on the submit button to collect data from the form and put it into the DB, then the DOM
 document.querySelector("#submit-btn").addEventListener("click", () => {
-    collectData("#first-name", "#last-name", "#email-address", "#phone-number", "#birthday", "#department", "supervisor")
+    const employeeObject = collectData("#first-name", "#last-name", "#email-address", "#phone-number", "#birthday", "#department", "supervisor")
+    createEmployee(employeeObject).then(() => {
+        printAllEmployees()
+    })
 
 })
 // Event listener on the search button (queries by name, department etc)
@@ -25,9 +28,9 @@ document.querySelector("#employee-cards").addEventListener("click", () => {
     if (targeted === "delete") {
         const employeeId = event.target.id.split("-")[2]
         delAlert(employeeId)
-    }
-    // check to see if the delete button was clicked
-    else if (targeted === "edit") {
+
+        // check to see if the delete button was clicked
+    } else if (targeted === "edit") {
         const employeeId = event.target.id.split("-")[2]
         // target the specific employee based on the ID number, fetch their info
         getOneEmployee(employeeId)
@@ -40,8 +43,13 @@ document.querySelector("#employee-cards").addEventListener("click", () => {
     } else if (targeted === "save") {
         console.log("save employee", event.target.id)
         const employeeId = event.target.id.split("-")[3]
+        const employeeObject = collectData(`#first-name-edit-${employeeId}`, `#last-name-edit-${employeeId}`, `#email-address-edit-${employeeId}`, `#phone-number-edit-${employeeId}`, `#birthday-edit-${employeeId}`, `#department-edit-${employeeId}`, `supervisor-edit-${employeeId}`)
+
+        putEmployee(employeeObject, employeeId).then(() => {
+            printAllEmployees()
 
 
+        })
         // add event listener on the exit button in the cards
     } else if (targeted === "exit") {
         console.log("exit employee", event.target.id)
@@ -50,7 +58,3 @@ document.querySelector("#employee-cards").addEventListener("click", () => {
 
     }
 })
-
-
-
-
