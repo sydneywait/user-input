@@ -42,8 +42,7 @@ const reformatDate =(date)=>{
     }
 
 const dateString =`${month} ${dateArray[2]}, ${dateArray[0]}`
-console.log(dateString)
+
 return dateString;
 }
 
-reformatDate("2019-02-03")

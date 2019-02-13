@@ -76,6 +76,17 @@
       "supervisor": "No",
       "gender": "male",
       "id": 11
+    },
+    {
+      "firstName": "Ashley",
+      "lastName": "Krupski",
+      "email": "krupski@gmail.com",
+      "phone": "7079836129",
+      "birthday": "1979-09-12",
+      "department": "Human Resources",
+      "supervisor": "No",
+      "gender": "other",
+      "id": 12
     }
   ]
 }

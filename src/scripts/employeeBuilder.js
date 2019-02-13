@@ -25,6 +25,10 @@ const buildEmployeeString = (id, object) => {
     else if (object.gender === "female") {
         image = "https://medmc.ca/wp-content/uploads/2018/08/person-placeholder-female.jpg"
     }
+    else if (object.gender === "other") {
+
+        image = "https://ae01.alicdn.com/kf/HTB1lZEUNFXXXXbtXFXXq6xXFXXXH/Full-diamond-sets-unfinish-decorative-Diy-Diamond-painting-animal-Diamond-embroidery-unicorn-5D-diamond-cross-stitch.jpg"
+    }
     let superClass = ""
     if (object.supervisor === "Yes") {
         superClass = "supervisor"
@@ -36,19 +40,18 @@ const buildEmployeeString = (id, object) => {
     const dateString = reformatDate(object.birthday)
 
     return document.querySelector(`#${id}`).innerHTML += `<div class="card ${superClass}" id = "employee-${object.id}" style="width: 200px;">
-  <img src="${image}" width = "180px" class="card-img-top" alt="...">
+  <div class = "card-image"><img src="${image}" width = "180px" class="card-img-top" alt="..."></div>
   <div class="card-body" id="card-${object.id}">
-
     <h4 class="card-title">${object.firstName} ${object.lastName}</h4>
     <p class="dept-title">${object.department}</p>
     <p class="card-email">Email: ${object.email}</p>
     <p class="card-phone">Phone: ${object.phone}</p>
     <p class="card-bday">Birthday: ${dateString}</p>
-        <div class ="card-btn-container">
-        <i class="fas fa-edit fa-3x" id = "edit-btn-${object.id}"></i>
-        <i class="fas fa-minus-square fa-3x" id = "delete-btn-${object.id}"></i>
-         </div>
-          </div>
+  </div>
+  <div class ="card-btn-container">
+    <div class = "icon2"><i class="fas fa-edit fa-3x" id = "edit-btn-${object.id}"></i></div>
+    <div class = "icon2"><i class="fas fa-minus-square fa-3x" id = "delete-btn-${object.id}"></i></div>
+  </div>
 </div>`
 
 }

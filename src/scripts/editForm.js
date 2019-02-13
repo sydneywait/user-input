@@ -6,17 +6,32 @@ const buildEditForm = (singleEmployee) => {
   let genderString = ""
   if (singleEmployee.gender === "male") {
     genderString = `<input type="radio" id="male-edit-${singleEmployee.id}" name="gender" value="male" checked>
-    <label for="male">male</label>
+    <label for="male">male</label><br>
     <input type="radio" id="female-edit-${singleEmployee.id}" name="gender" value="female">
-    <label for="female">female</label><br>`
+    <label for="female">female</label><br>
+    <input type="radio" id="other-edit-${singleEmployee.id}" name="gender" value="other">
+  <label for="other">other</label><br>`
   }
   if (singleEmployee.gender === "female") {
     genderString = `<input type="radio" id="male-edit-${singleEmployee.id}" name="gender" value="male">
-  <label for="male">male</label>
+  <label for="male">male</label><br>
   <input type="radio" id="female-edit-${singleEmployee.id}" name="gender" value="female" checked>
-  <label for="female">female</label><br>`
-// Build string to pre-populate form with supervisor status
+  <label for="female">female</label><br>
+  <input type="radio" id="other-edit-${singleEmployee.id}" name="gender" value="other">
+  <label for="other">other</label><br>`
+
   }
+  if (singleEmployee.gender === "other") {
+    genderString = `<input type="radio" id="male-edit-${singleEmployee.id}" name="gender" value="male">
+  <label for="male">male</label><br>
+  <input type="radio" id="female-edit-${singleEmployee.id}" name="gender" value="female">
+  <label for="female">female</label><br>
+  <input type="radio" id="other-edit-${singleEmployee.id}" name="gender" value="other" checked>
+  <label for="other">other</label><br>`
+
+  }
+
+  // Build string to pre-populate form with supervisor status
   let checkboxString = ""
   if (singleEmployee.supervisor === "Yes") {
 

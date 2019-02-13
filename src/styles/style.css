@@ -6,30 +6,29 @@
 }
 
 .card{
-
+display: flex;
+flex-direction: column;
     border: 2px black solid;
     margin: 1em 1em 1em 1em;
-    border-radius: 20px
-    /* justify-content: center; */
-    /* margin: 0 auto; */
-
+    border-radius: 20px;
+    position: relative;
 
 }
+.card-body{
 
+}
 img{
-    display: inline-block;
-    /* border: 1px navy solid; */
     border-radius: 20px;
-    justify-content: center;
-    margin-left: 10px;
+
+}
+.card-image{
+    align-self: center;
     margin-top: 10px;
 }
 
 .dept-title{
     text-align: center;
-
         color: navy;
-
     }
 
     .card-title{
@@ -37,12 +36,10 @@ img{
     }
 
     .supervisor{
-
         background: cornflowerblue;
     }
 
     .employee{
-
         background: lightblue;
     }
 
@@ -51,24 +48,52 @@ img{
     flex-direction: row;
     justify-content: space-evenly;
     background: grey;
-    margin: 5px 10px 10px 10px;
+    margin-top: auto;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 5px;
-
     }
 
 
 #form-header{
     font-family: 'News Cycle', sans-serif;
-
     display: flex;
     flex-direction: row;
     justify-content: left;
     border: 1px black solid;
 }
+/* styling for the icons */
+.icon{
+    text-align: right;
+}
+.icon2{
 
+
+}
 .fa-sign-in-alt{
-    display: block;
-    text-align: end;
+    display: inline-block;
+}
+
+.fa-sign-in-alt:hover{
+    background: rgb(206, 189, 189);
+}
+.fa-address-card{
+    display: inline-block;
+
+}
+.fa-address-card:hover{
+    background: rgb(206, 189, 189);
+}
+.fa-search{
+    display: inline-block;
+
+}
+.fa-search:hover{
+    background: rgb(206, 189, 189);
+}
+.fas:hover{
+    background: rgb(206, 189, 189);
 
 }
 
