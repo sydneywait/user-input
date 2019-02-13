@@ -3,7 +3,7 @@ const delAlert = (employeeId) => {
     let modal = document.getElementById("myModal");
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    let span = document.getElementsByClassName("close")[0];
 
     // Display the modal
     modal.style.display = "block";

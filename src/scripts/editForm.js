@@ -1,3 +1,6 @@
+// This is the form that is displayed when the "edit" button is clicked on an employee card
+// it targets the specific employee based on the ID number.  requires a fetch call first
+// getEmployee
 const buildEditForm = (singleEmployee) =>{
 
 return `<div id="form-header-edit">

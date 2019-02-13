@@ -54,28 +54,6 @@
       "supervisor": "Yes",
       "gender": "male",
       "id": 8
-    },
-    {
-      "firstName": "Kelly",
-      "lastName": "Stanton",
-      "email": "kelly@gmail.com",
-      "phone": "3043569874",
-      "birthday": "1956-02-05",
-      "department": "Sales",
-      "supervisor": "No",
-      "gender": "female",
-      "id": 9
-    },
-    {
-      "firstName": "Kelly",
-      "lastName": "Stanton",
-      "email": "kelly@gmail.com",
-      "phone": "3043569874",
-      "birthday": "1956-02-05",
-      "department": "Sales",
-      "supervisor": "No",
-      "gender": "female",
-      "id": 10
     }
   ]
 }

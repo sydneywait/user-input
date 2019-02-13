@@ -14,6 +14,7 @@ const getAllEmployees = () => {
 }
 
 const printAllEmployees = () => {
+    document.querySelector("#employee-cards").innerHTML = ""
     getAllEmployees()
         .then((allEmployees => {
             allEmployees.forEach(employee => {
