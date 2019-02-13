@@ -11,7 +11,7 @@ const createEmployee = (employeeObject) => {
 // ========== FETCH ALL EMPLOYEES IN DATABASE=========== //
 const getAllEmployees = () => {
     document.querySelector("#employee-cards").innerHTML = ""
-    return fetch("http://localhost:8088/employees")
+    return fetch("http://localhost:8088/employees?sort=lastName")
         .then(employees => employees.json())
 }
 // ========== PRINT ALL EMPLOYEES IN DATABASE=========== //

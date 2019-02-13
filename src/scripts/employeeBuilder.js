@@ -15,6 +15,7 @@ const buildEmployeeObject = (firstName, lastName, email, phone, birthday, depart
     return employeeObject;
 }
 
+
 const buildEmployeeString = (id, object) => {
     let image = "";
 
@@ -32,6 +33,7 @@ const buildEmployeeString = (id, object) => {
     else if (object.supervisor === "No") {
         superClass = "employee"
     }
+    const dateString = reformatDate(object.birthday)
 
     return document.querySelector(`#${id}`).innerHTML += `<div class="card ${superClass}" id = "employee-${object.id}" style="width: 200px;">
   <img src="${image}" width = "180px" class="card-img-top" alt="...">
@@ -41,7 +43,7 @@ const buildEmployeeString = (id, object) => {
     <p class="dept-title">${object.department}</p>
     <p class="card-email">Email: ${object.email}</p>
     <p class="card-phone">Phone: ${object.phone}</p>
-    <p class="card-bday">Birthday: ${object.birthday}</p>
+    <p class="card-bday">Birthday: ${dateString}</p>
         <div class ="card-btn-container">
         <i class="fas fa-edit fa-3x" id = "edit-btn-${object.id}"></i>
         <i class="fas fa-minus-square fa-3x" id = "delete-btn-${object.id}"></i>
