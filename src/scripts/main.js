@@ -1,38 +1,13 @@
-
+// event listener on the submit button to collect data from the form and put it into the DB, then the DOM
 document.querySelector("#submit-btn").addEventListener("click", () => {
-    //collect the data from the form fields//
-    const firstName = document.querySelector("#first-name").value
-    const lastName = document.querySelector("#last-name").value
-    const email = document.querySelector("#email-address").value
-    const phone = document.querySelector("#phone-number").value
-    const birthday = document.querySelector("#birthday").value
-    const department = document.querySelector("#department").value
-    //check if the checkbox is checked
-    const supervisor = document.getElementById("supervisor")
-    let superValue = ""
-    if (supervisor.checked === true) {
-        superValue = "Yes"
-    }
-    else {
-        superValue = "No"
-    }
-    //Check which gender is specified
-    const gender = document.querySelector("input[name = \"gender\"]:checked").value
-    const employeeObject = buildEmployeeObject(firstName, lastName, email, phone, birthday, department, superValue, gender)
-    createEmployee(employeeObject).then(() => {
-        printAllEmployees()
-    })
+    collectData("#first-name", "#last-name", "#email-address", "#phone-number", "#birthday", "#department", "supervisor")
+
 })
 // Event listener on the search button (queries by name, department etc)
 document.querySelector("#search-name-btn").addEventListener("click", () => {
     const searchTerm = document.querySelector("#search-name").value
     queryAllEmployees(searchTerm)
 })
-
-// document.querySelector("#search-dept-btn").addEventListener("click", () => {
-//     const searchTerm = document.querySelector("#search-department").value
-//     queryAllEmployees(searchTerm)
-// })
 
 // event listener on the "show Supervisors" button
 document.querySelector("#show-super-btn").addEventListener("click", () => {
@@ -65,6 +40,7 @@ document.querySelector("#employee-cards").addEventListener("click", () => {
     } else if (targeted === "save") {
         console.log("save employee", event.target.id)
         const employeeId = event.target.id.split("-")[3]
+
 
         // add event listener on the exit button in the cards
     } else if (targeted === "exit") {

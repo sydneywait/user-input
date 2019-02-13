@@ -54,6 +54,17 @@
       "supervisor": "Yes",
       "gender": "male",
       "id": 8
+    },
+    {
+      "firstName": "Thomas",
+      "lastName": "Wait",
+      "email": "sydneyroo@yahoo.com",
+      "phone": "3043000869",
+      "birthday": "1956-02-21",
+      "department": "Finance",
+      "supervisor": "No",
+      "gender": "male",
+      "id": 10
     }
   ]
 }
