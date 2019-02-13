@@ -1,3 +1,4 @@
+// ============ CREATE EMPLOYEE IN DATABASE============= //
 const createEmployee = (employeeObject) => {
     return fetch("http://localhost:8088/employees", {
         method: "POST",
@@ -7,12 +8,13 @@ const createEmployee = (employeeObject) => {
         body: JSON.stringify(employeeObject)
     })
 }
+// ========== FETCH ALL EMPLOYEES IN DATABASE=========== //
 const getAllEmployees = () => {
     document.querySelector("#employee-cards").innerHTML = ""
     return fetch("http://localhost:8088/employees")
         .then(employees => employees.json())
 }
-
+// ========== PRINT ALL EMPLOYEES IN DATABASE=========== //
 const printAllEmployees = () => {
     document.querySelector("#employee-cards").innerHTML = ""
     getAllEmployees()
@@ -23,8 +25,9 @@ const printAllEmployees = () => {
         })
         )
 }
-
+// ========= PRINT ALL SUPERVISORS IN DATABASE========== //
 const printAllSupervisors = () => {
+    document.querySelector("#employee-cards").innerHTML = ""
     getAllEmployees()
         .then((allEmployees => {
             allEmployees.forEach(employee => {
@@ -34,7 +37,7 @@ const printAllSupervisors = () => {
         })
         )
 }
-
+// ========== SEARCH ALL EMPLOYEES IN DATABASE=========== //
 const queryAllEmployees = (searchTerm) => {
     document.querySelector("#employee-cards").innerHTML = ""
     return fetch(`http://localhost:8088/employees?q=${searchTerm}`)
@@ -45,23 +48,13 @@ const queryAllEmployees = (searchTerm) => {
             })
         })
 }
-
-const delEmployee = (employeeId) => {
-    return fetch(`http://localhost:8088/employees/${employeeId}`, {
-
-        method: "DELETE"
-
-    })
-}
-
+// ========== FETCH SINGLE EMPLOYEE =========== //
 const getOneEmployee =(employeeId) => {
     document.querySelector(`#employee-${employeeId}`).innerHTML = ""
     return fetch(`http://localhost:8088/employees/${employeeId}`)
     .then(employee=>employee.json())
 }
-
-
-
+// ========== PUT (EDIT) SINGLE EMPLOYEE =========== //
 const putEmployee = (employeeObject, employeeId) => {
     return fetch(`http://localhost:8088/employees/${employeeId}`, {
     method: "PUT",
@@ -71,6 +64,16 @@ const putEmployee = (employeeObject, employeeId) => {
         body: JSON.stringify(employeeObject)
         })
     }
+// ========== DELETE SINGLE EMPLOYEE =========== //
+const delEmployee = (employeeId) => {
+    return fetch(`http://localhost:8088/employees/${employeeId}`, {
+
+        method: "DELETE"
+
+    })
+}
+
+
 
 
 

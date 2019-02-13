@@ -5,18 +5,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport content=width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+  integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+  crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=News+Cycle|Raleway" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
+
   <title>Document</title>
 </head>
 
 <body>
+  <!-- FORM FOR CREATING EMPLOYEE -->
   <div id="form-header">
     <section id="form-input">
       <fieldset>
         <input type="text" id="first-name" placeholder="Enter First Name"><br>
         <input type="text" id="last-name" placeholder="Enter Last Name"><br>
         <input type="text" id="email-address" placeholder="Enter Email Address"><br>
-        <input type="text" id="phone-number" placeholder="Enter Phone Number"><br>
+        <input type="tel" id="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter Phone Number"><br>
         <input type="date" id="birthday" placeholder="Enter Birthday"><br>
         <select id="department">
           <option value="Finance">Finance</option>
@@ -24,49 +30,45 @@
           <option value="Human Resources">Human Resources</option>
           <option value="Marketing">Marketing</option>
         </select><br>
-        <input type="checkbox" name = "super" id="supervisor" value=true >Supervisor?<br>
+        <input type="checkbox" name="super" id="supervisor" value=true>Supervisor?<br>
         <input type="radio" id="male" name="gender" value="male" checked>
         <label for="male">male</label>
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">female</label><br>
-        <button id="submit-btn">Submit</button>
+        <i class="fas fa-sign-in-alt fa-3x" id="submit-btn"></i>
       </fieldset>
 
-      <!-- The Modal -->
-<div id="myModal" class="modal">
+      <!-- MODAL FOR CONFIRMING DELETE REQUEST -->
+      <div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Are you sure you want to delete?</p>
-    <button id ="yes-modal">yes</button>
-    <button id = "no-modal">no</button>
-  </div>
-
-</div>
-
-
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Are you sure you want to delete?</p>
+          <button id="yes-modal">yes</button>
+          <button id="no-modal">no</button>
+        </div>
+      </div>
     </section>
+      <!-- FORM FOR SEARCHING EMPLOYEE -->
+
     <section id="search-queries">
       <fieldset>
-        <input type="text" id="search-name" placeholder="Search by Name or Department"><br>
-        <button id="search-name-btn">Search</button>
+
+        <input type="text" id="search-name" placeholder="Search by Name or Department">
+        <i class="fas fa-search fa-3x" id="search-name-btn"></i>
+
       </fieldset>
-        <!-- <fieldset>
-        <input type="text" id="search-department" placeholder="Search by Department"><br>
-        <button id="search-dept-btn">Search</button>
-      </fieldset> -->
-    </fieldset>
-    <fieldset>
-        <label for="show-super-btn" class="btn-labels">Show All Supervisors</label> <br>
-        <button id="show-super-btn">Show</button>
-  </fieldset>
-  <fieldset>
-      <label for="show-all-btn" class="btn-labels">Show All Employees</label> <br>
-      <button id="show-all-btn">Show</button>
-</fieldset>
 
-
+      <!-- FORM FOR SHOWING EMPLOYEES/SUPERVISORS -->
+      <fieldset>
+        <label for="show-super-btn" class="btn-labels">Show All Supervisors</label>
+        <i class="far fa-address-card fa-3x" id="show-super-btn"></i>
+      </fieldset>
+      <fieldset>
+        <label for="show-all-btn" class="btn-labels">Show All Employees</label>
+        <i class="far fa-address-card fa-3x" id="show-all-btn"></i>
+      </fieldset>
     </section>
   </div>
 
@@ -75,8 +77,8 @@
 
   <script src="scripts/employeeBuilder.js"></script>
   <script src="scripts/apiManager.js"></script>
-  <script src ="scripts/collectData.js"></script>
-  <script src = "scripts/delAlert.js"></script>
+  <script src="scripts/collectData.js"></script>
+  <script src="scripts/delAlert.js"></script>
 
   <script src="scripts/editForm.js"></script>
   <script src="scripts/main.js"></script>

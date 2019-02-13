@@ -16,9 +16,9 @@
       "lastName": "Wait",
       "email": "isaac@gmail.com",
       "phone": "3045698745",
-      "birthday": "",
+      "birthday": "2000-05-21",
       "department": "Marketing",
-      "supervisor": "Yes",
+      "supervisor": "No",
       "gender": "male",
       "id": 3
     },
@@ -28,7 +28,7 @@
       "email": "connie@gmail.com",
       "phone": "3045698745",
       "birthday": "1955-02-21",
-      "department": "Sales",
+      "department": "Finance",
       "supervisor": "No",
       "gender": "female",
       "id": 5
@@ -65,6 +65,17 @@
       "supervisor": "No",
       "gender": "male",
       "id": 10
+    },
+    {
+      "firstName": "Josh",
+      "lastName": "Thomas",
+      "email": "josh@email.com",
+      "phone": "3047435699",
+      "birthday": "1974-03-02",
+      "department": "Human Resources",
+      "supervisor": "No",
+      "gender": "male",
+      "id": 11
     }
   ]
 }
